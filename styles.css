@@ -15,25 +15,34 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 16px;
+}
+
 section {
   background-color: rgb(245, 245, 245);
 }
 
-/*
-
-LANDING PAGE
-
-*/
-
 #landing {
   min-height: 100vh;
+  position: relative;
 }
 
-.header {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.title {
+  font-size: 120px;
+  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1;
+}
+
+.yellow {
+  color: #c1e32b;
+  font-weight: bold;
 }
 
 /*
@@ -81,3 +90,69 @@ nav {
   font-size: 20px;
 }
 
+/*
+
+LANDING PAGE
+
+*/
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 30px;
+}
+
+.header__para {
+  font-size: 24px;
+  line-height: 2;
+  max-width: 450px;
+}
+
+.social__list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c1e32b;
+  color: black;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  margin-right: 12px;
+  border-radius: 50%;
+}
+
+.click {
+  transition: all 0.3s ease;
+}
+
+.click:hover {
+  transform: scale(1.2);
+}
+
+.click:active {
+  transform: scale(0.8);
+}
+
+.mail__btn {
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 32px;
+  right: 40px;
+}
