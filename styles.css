@@ -33,6 +33,10 @@ section {
   position: relative;
 }
 
+.container {
+  padding: 50px 0;
+}
+
 .title {
   font-size: 120px;
   margin-bottom: 12px;
@@ -75,7 +79,6 @@ nav {
   font-size: 16px;
   color: #242424;
   font-weight: 700;
-
 }
 
 .nav__hover-effect {
@@ -155,4 +158,44 @@ LANDING PAGE
   position: absolute;
   bottom: 32px;
   right: 40px;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll__icon {
+  width: 20px;
+  height: 30px;
+  border: 2px solid #242424;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll__icon::after {
+  content: "";
+  width: 4px;
+  height: 6px;
+  background-color: #242424;
+  border-radius: 2px;
+  animation: bounce 1000ms infinite alternate-reverse;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+
+
+@media () {
+  
 }
