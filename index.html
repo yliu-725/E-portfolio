@@ -9,6 +9,17 @@
       src="https://kit.fontawesome.com/2039be61be.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "1b6Z2jPGQK0dJMi_i",
+        });
+      })();
+    </script>
   </head>
   <body>
     <section id="landing">
@@ -53,7 +64,7 @@
         <ul class="nav__link--list">
           <li class="nav__link">
             <a
-              href="#"
+              href="#landing"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >About</a
             >
@@ -73,9 +84,7 @@
             >
           </li>
           <li class="nav__link">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            <a href="#" class="nav__link--anchor"
               ><i class="fa-solid fa-circle-half-stroke"></i
             ></a>
           </li>
@@ -86,11 +95,11 @@
           <h1 class="title">Hi</h1>
           <h1 class="title yellow">I'm Yihui.</h1>
           <p class="header__para">
-            I'm a <span class="yellow">Frontend Software Engineer</span> with a
+            I'm a <span class="color">Frontend Software Engineer</span> with a
             strong passion for building web applications with great user
             experiences.
             <br />
-            Here's a bit more <span class="yellow">about me.</span>
+            Here's a bit more <span class="color">about me.</span>
           </p>
           <div class="social__list">
             <a href="#" class="social__link click"
@@ -111,12 +120,100 @@
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer.
+          </h4>
+          <p class="modal__para">
+            I'm a 23 year old
+            <span class="color">frontend software engineer</span> with a strong
+            passion for developing websites with great user experiences.
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            natus officia minus libero dolores nesciunt aliquid consequuntur,
+            enim amet aspernatur?
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+              />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+              />
+              <span class="language__name">Javascript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                alt=""
+              />
+              <span class="language__name">React</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h4 class="modal__sub-title">
+            I'm currently open to new opportunities.
+          </h4>
+          <form action="" id="contact__form">
+            <div class="form__item">
+              <label class="form__item--label" for="name">Name</label>
+              <input class="input" name="user-name" type="text" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label" for="email">Email</label>
+              <input class="input" name="user-email" type="email" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label" for="message">Message</label>
+              <textarea
+                class="input"
+                name="user-message"
+                type="text"
+                required
+              ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking with you soon.
+          </div>
+        </div>
+        <i class="fa-solid fa-xmark modal__exit click"></i>
+      </div>
     </section>
-    <section class="projects">
+    <section id="projects">
       <div class="container">
         <div class="row">
           <h1 class="section__title">
-            Here are some of my <span class="yellow">projects</span>
+            Here are some of my <span class="color">projects</span>
           </h1>
           <ul class="project__list">
             <li class="project">
@@ -240,13 +337,7 @@
               >
                 L
               </text>
-              <rect
-                x="20"
-                y="83"
-                width="120"
-                height="5"
-                fill="#242424"
-              />
+              <rect x="20" y="83" width="120" height="5" fill="#242424" />
             </svg>
           </figure>
           <div class="footer__social--list">
