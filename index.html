@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
     <script
       src="https://kit.fontawesome.com/2039be61be.js"
       crossorigin="anonymous"
@@ -30,35 +31,33 @@
             height="70"
             viewBox="0 0 160 160"
             xmlns="http://www.w3.org/2000/svg"
+            class="logo"
           >
             <rect width="160" height="160" fill="transparent" />
+            <!-- Y -->
             <text
               x="25"
               y="100"
               font-family="Inter, Helvetica, Arial, sans-serif"
               font-size="110"
               font-weight="700"
-              fill="black"
+              fill="currentColor"
             >
               Y
             </text>
+            <!-- L -->
             <text
               x="75"
               y="130"
               font-family="Inter, Helvetica, Arial, sans-serif"
               font-size="110"
               font-weight="700"
-              fill="black"
+              fill="currentColor"
             >
               L
             </text>
-            <rect
-              x="20"
-              y="83"
-              width="120"
-              height="5"
-              fill="rgb(245, 245, 245)"
-            />
+            <!-- Horizontal line -->
+            <rect x="20" y="83" width="120" height="5" class="logo-line" />
           </svg>
         </figure>
         <ul class="nav__link--list">
@@ -80,10 +79,11 @@
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              onclck="toggleModal()"
               >Contact</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a href="#" class="nav__link--anchor"
               ><i class="fa-solid fa-circle-half-stroke"></i
             ></a>
@@ -93,7 +93,7 @@
       <header class="header">
         <div class="header__content">
           <h1 class="title">Hi</h1>
-          <h1 class="title yellow">I'm Yihui.</h1>
+          <h1 class="sub-title color">I'm Yihui</h1>
           <p class="header__para">
             I'm a <span class="color">Frontend Software Engineer</span> with a
             strong passion for building web applications with great user
@@ -114,7 +114,7 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-regular fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -177,7 +177,7 @@
           <h4 class="modal__sub-title">
             I'm currently open to new opportunities.
           </h4>
-          <form action="" id="contact__form">
+          <form onsubmit="contact()" id="contact__form">
             <div class="form__item">
               <label class="form__item--label" for="name">Name</label>
               <input class="input" name="user-name" type="text" required />
@@ -315,29 +315,33 @@
               height="70"
               viewBox="0 0 160 160"
               xmlns="http://www.w3.org/2000/svg"
+              class="footer__logo"
             >
               <rect width="160" height="160" fill="transparent" />
+              <!-- Y -->
               <text
                 x="25"
                 y="100"
                 font-family="Inter, Helvetica, Arial, sans-serif"
                 font-size="110"
                 font-weight="700"
-                fill="white"
+                fill="currentColor"
               >
                 Y
               </text>
+              <!-- L -->
               <text
                 x="75"
                 y="130"
                 font-family="Inter, Helvetica, Arial, sans-serif"
                 font-size="110"
                 font-weight="700"
-                fill="white"
+                fill="currentColor"
               >
                 L
               </text>
-              <rect x="20" y="83" width="120" height="5" fill="#242424" />
+              <!-- Horizontal line -->
+              <rect x="20" y="83" width="120" height="5" class="footer__logo-line" />
             </svg>
           </figure>
           <div class="footer__social--list">
@@ -354,6 +358,7 @@
             <a
               href="#"
               class="footer__social--link link__hover-effect link__hover-effect--white"
+              onclck="toggleModal()"
               >Contact</a
             >
             <a
